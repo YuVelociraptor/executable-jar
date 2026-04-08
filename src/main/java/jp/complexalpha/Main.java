@@ -13,5 +13,13 @@ public class Main {
             // <shortcut actionId="ToggleLineBreakpoint"/> を押すといつでも他のブレークポイントを追加できます。
             IO.println("i = " + i);
         }
+
+        String envTest = System.getenv("ENV_TEST");
+
+        if (envTest != null) {
+            IO.println(String.format("ENV_TEST = %s", envTest));
+        }else{
+            IO.println(String.format("ENV_TEST is null"));
+        }
     }
 }

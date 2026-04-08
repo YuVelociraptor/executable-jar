@@ -1,9 +1,10 @@
 plugins {
     id("java")
+    id("com.gradleup.shadow") version "9.3.1"
 }
 
 group = "jp.complexalpha"
-version = "1.0-SNAPSHOT"
+version = "1.0.0"
 
 repositories {
     mavenCentral()
@@ -17,4 +18,10 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+}
+
+tasks {
+    shadowJar {
+        archiveBaseName.set("executable_jar")
+    }
 }
