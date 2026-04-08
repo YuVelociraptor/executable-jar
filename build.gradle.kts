@@ -23,5 +23,7 @@ tasks.test {
 tasks {
     shadowJar {
         archiveBaseName.set("executable_jar")
+        archiveClassifier.set("")
+        archiveVersion.set("")
     }
 }
